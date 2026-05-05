@@ -94,46 +94,29 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      max-width: 920px;
+      margin: 0 auto;
     }
 
     .stamp {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
       background: #fffdf8;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 14px;
     }
 
-    .stamp-img {
-      min-height: 170px;
-      border: 2px dashed var(--line);
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, #fffaf3, #f1e2d1);
-      color: var(--muted);
-      text-align: center;
-      padding: 14px;
-      font-size: 0.95rem;
-    }
-
-    .stamp-img img {
+    .stamp img {
       width: 100%;
-      height: auto;
-      border-radius: 12px;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
 
-    .stamp h3 {
-      margin: 12px 0 4px;
-      font-size: 1.05rem;
-    }
-
-    .stamp p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
+    @media (max-width: 760px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     table {
@@ -226,96 +209,30 @@
     <section>
       <h2>Stamp Images</h2>
       <div class="gallery">
-        <article class="stamp">
-          <div class="stamp-img">Add image here<br />Then sings my soul</div>
-          <h3>Then sings my soul</h3>
-          <p>Hymn lyric. Should feel graceful, old-fashioned, and readable.</p>
-        </article>
-
-        <article class="stamp">
-          <div class="stamp-img">Add image here<br />It is well with my soul</div>
-          <h3>It is well with my soul</h3>
-          <p>Needs to feel calm, classic, and centered.</p>
-        </article>
-
-        <article class="stamp">
-          <div class="stamp-img">Add image here<br />Be still and know...</div>
-          <h3>Be still and know that I am God</h3>
-          <p>Stacked layout option. Main question: does the emphasis feel right?</p>
-        </article>
-
-        <article class="stamp">
-          <div class="stamp-img">Add image here<br />As for me and my house...</div>
-          <h3>As for me and my house</h3>
-          <p>Longer phrase. Needs strong hierarchy so it does not feel crowded.</p>
-        </article>
-
-        <article class="stamp">
-          <div class="stamp-img">Add image here<br />If God is for us...</div>
-          <h3>If God is for us</h3>
-          <p>Should be bold and confident without becoming too modern.</p>
-        </article>
-
-        <article class="stamp">
-          <div class="stamp-img">Add image here<br />Fearfully and wonderfully made</div>
-          <h3>Fearfully and wonderfully made</h3>
-          <p>Needs warmth and beauty, but still stamp-friendly.</p>
-        </article>
-
-        <article class="stamp">
-          <div class="stamp-img">Add image here<br />Pray without ceasing</div>
-          <h3>Pray without ceasing</h3>
-          <p>Short phrase. Good candidate for a simple strong design.</p>
-        </article>
-
-        <article class="stamp">
-          <div class="stamp-img">Add image here<br />You are the light of the world</div>
-          <h3>You are the light of the world</h3>
-          <p>Should feel uplifting but not childish.</p>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <h2>Decision Tracker</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Sentiment</th>
-            <th>Keep?</th>
-            <th>Readable?</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Then sings my soul</td><td></td><td></td><td></td></tr>
-          <tr><td>It is well with my soul</td><td></td><td></td><td></td></tr>
-          <tr><td>Be still and know that I am God</td><td></td><td></td><td></td></tr>
-          <tr><td>As for me and my house</td><td></td><td></td><td></td></tr>
-          <tr><td>If God is for us</td><td></td><td></td><td></td></tr>
-          <tr><td>Fearfully and wonderfully made</td><td></td><td></td><td></td></tr>
-          <tr><td>Pray without ceasing</td><td></td><td></td><td></td></tr>
-          <tr><td>You are the light of the world</td><td></td><td></td><td></td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2>Text to send with the link</h2>
-      <div class="copy-text">I made a quick review page for the stamp designs. Can you look through these and tell me:
-
-1. Which ones are your favorites?
-2. Which ones are easiest to read?
-3. Which ones feel most like actual rubber stamps?
-4. Any wording/layout/font that feels off?
-
-You do not need to be formal. Just send me quick notes.</div>
-    </section>
-
-    <section>
-      <h2>Production Notes</h2>
-      <div class="note-box">
-        Final stamp goal: clean rubber-stamp-style sentiments, not overly decorative, readable at stamp size, and suitable for mounting on acrylic blocks.
+        <div class="stamp">
+          <img src="images/3e5b84e4-8279-4006-8237-1ea4fe20a3ed.png" alt="Stamp design option 1" />
+        </div>
+        <div class="stamp">
+          <img src="images/5202872f-f0d8-4811-98af-d2984bd01dd3.png" alt="Stamp design option 2" />
+        </div>
+        <div class="stamp">
+          <img src="images/8d4da480-4cae-420d-b1ee-b9d50766b67f.png" alt="Stamp design option 3" />
+        </div>
+        <div class="stamp">
+          <img src="images/b1aaca5a-76ab-4fc5-9b06-a22c8ac3d6af.png" alt="Stamp design option 4" />
+        </div>
+        <div class="stamp">
+          <img src="images/d106b8d5-7fb7-4771-a7f1-57aefc64b85a.png" alt="Stamp design option 5" />
+        </div>
+        <div class="stamp">
+          <img src="images/dfc8396d-f6cb-44cd-a955-19026acc6d37.png" alt="Stamp design option 6" />
+        </div>
+        <div class="stamp">
+          <img src="images/feca135b-74e3-4121-a4c4-14491bb1b3fd.png" alt="Stamp design option 7" />
+        </div>
+        <div class="stamp">
+          <img src="images/then%20sings%20my%20soul.png" alt="Then sings my soul stamp design" />
+        </div>
       </div>
     </section>
   </main>
